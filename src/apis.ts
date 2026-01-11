@@ -96,6 +96,7 @@ import { getPinConversationsFactory } from "./apis/getPinConversations.js";
 import { getAutoDeleteChatFactory } from "./apis/getAutoDeleteChat.js";
 import { changeAccountAvatarFactory } from "./apis/changeAccountAvatar.js";
 import { sendVoiceFactory } from "./apis/sendVoice.js";
+import { setArchivedConversationsFactory } from "./apis/setArchivedConversations.js";
 import { getFriendRequestStatusFactory } from "./apis/getFriendRequestStatus.js";
 import { disperseGroupFactory } from "./apis/disperseGroup.js";
 import { getAllFriendsFactory } from "./apis/getAllFriends.js";
@@ -237,6 +238,7 @@ export class API {
     public getAutoDeleteChat: ReturnType<typeof getAutoDeleteChatFactory>;
     public changeAccountAvatar: ReturnType<typeof changeAccountAvatarFactory>;
     public sendVoice: ReturnType<typeof sendVoiceFactory>;
+    public setArchivedConversations: ReturnType<typeof setArchivedConversationsFactory>;
     public getFriendRequestStatus: ReturnType<typeof getFriendRequestStatusFactory>;
     public disperseGroup: ReturnType<typeof disperseGroupFactory>;
     public getAllFriends: ReturnType<typeof getAllFriendsFactory>;
@@ -378,6 +380,7 @@ export class API {
         this.getAutoDeleteChat = getAutoDeleteChatFactory(ctx, this);
         this.changeAccountAvatar = changeAccountAvatarFactory(ctx, this);
         this.sendVoice = sendVoiceFactory(ctx, this);
+        this.setArchivedConversations = setArchivedConversationsFactory(ctx, this);
         this.getFriendRequestStatus = getFriendRequestStatusFactory(ctx, this);
         this.disperseGroup = disperseGroupFactory(ctx, this);
         this.getAllFriends = getAllFriendsFactory(ctx, this);
