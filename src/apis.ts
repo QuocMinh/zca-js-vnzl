@@ -50,6 +50,7 @@ import { getContextFactory } from "./apis/getContext.js";
 import { getCookieFactory } from "./apis/getCookie.js";
 import { getFriendBoardListFactory } from "./apis/getFriendBoardList.js";
 import { getFriendOnlinesFactory } from "./apis/getFriendOnlines.js";
+import { getFriendProfileFactory } from "./apis/getFriendProfile.js";
 import { getFriendRecommendationsFactory } from "./apis/getFriendRecommendations.js";
 import { getFriendRequestStatusFactory } from "./apis/getFriendRequestStatus.js";
 import { getGroupBlockedMemberFactory } from "./apis/getGroupBlockedMember.js";
@@ -193,6 +194,7 @@ export class API {
     public getCookie: ReturnType<typeof getCookieFactory>;
     public getFriendBoardList: ReturnType<typeof getFriendBoardListFactory>;
     public getFriendOnlines: ReturnType<typeof getFriendOnlinesFactory>;
+    public getFriendProfile: ReturnType<typeof getFriendProfileFactory>;
     public getFriendRecommendations: ReturnType<typeof getFriendRecommendationsFactory>;
     public getFriendRequestStatus: ReturnType<typeof getFriendRequestStatusFactory>;
     public getGroupBlockedMember: ReturnType<typeof getGroupBlockedMemberFactory>;
@@ -336,6 +338,7 @@ export class API {
         this.getCookie = getCookieFactory(ctx, this);
         this.getFriendBoardList = getFriendBoardListFactory(ctx, this);
         this.getFriendOnlines = getFriendOnlinesFactory(ctx, this);
+        this.getFriendProfile = getFriendProfileFactory(ctx, this);
         this.getFriendRecommendations = getFriendRecommendationsFactory(ctx, this);
         this.getFriendRequestStatus = getFriendRequestStatusFactory(ctx, this);
         this.getGroupBlockedMember = getGroupBlockedMemberFactory(ctx, this);
